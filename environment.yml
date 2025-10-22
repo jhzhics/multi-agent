@@ -6,7 +6,9 @@ dependencies:
   - python=3.11
   - numpy=2.3
   - pip:
-      - openai
+  # For Augogen Framework
       - autogen-ext
       - autogen-agentchat
-      - tiktoken
+  # For MCP server
+      - mcp[cli]
+      - httpx

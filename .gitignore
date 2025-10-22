@@ -1,2 +1,8 @@
+# Miscellaneous ignores
+__pycache__/
+
+# For temporary notes locally
 note.md
+
+# For system log generated
 log.txt

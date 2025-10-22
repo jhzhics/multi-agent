@@ -41,7 +41,7 @@ async def main() -> None:
                                                 })
 
         agent = AssistantAgent("assistant", model_client=model_client)
-        print(await agent.run(task="Say 'Hello World!'"))
+        print(await agent.run(task="What's the weather like in Los Angeles, California(34.0549° N, 118.2426° W) today?"))
         await model_client.close()
         
     except Exception as e:        
