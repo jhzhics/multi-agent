@@ -1,7 +1,5 @@
 import asyncio
-import openai
 import logging
-import http.client
 from autogen_ext.models.openai import OpenAIChatCompletionClient
 from autogen_agentchat.agents import AssistantAgent 
 
@@ -11,7 +9,6 @@ from autogen_agentchat.agents import AssistantAgent
 
 # 1. Define the logger object
 logger = logging.getLogger()
-logger.setLevel(logging.DEBUG)
 
 # 2. Create a file handler
 file_handler = logging.FileHandler('log.txt', mode='w') # 'w' overwrites, 'a' appends
@@ -24,8 +21,8 @@ file_handler.setFormatter(formatter)
 # 4. Add the file handler to the logger
 logger.addHandler(file_handler)
 
-# 5. Set the debug level for http.client (this output is captured by the file handler)
-http.client.HTTPConnection.debuglevel = 1 
+# 5. Set the logging level for the logger
+logging.getLogger("autogen_core").setLevel(logging.DEBUG)
 # ----------------------------------------------------
 
 
