@@ -49,8 +49,7 @@ async def main() -> None:
         async with McpWorkbench(weather_server_params) as weather_mcp:
             agent = AssistantAgent(
                 "weather_assistant",
-                system_message="""You are a helpful assistant that can provide weather information. 
-                You can get weather forecasts for specific locations using latitude and longitude coordinates.""",
+                system_message="""You are a helpful assistant that can provide weather information.""",
                 model_client=model_client,
                 workbench=weather_mcp,
                 model_client_stream=True,
