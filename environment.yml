@@ -6,6 +6,8 @@ dependencies:
   - python=3.11
   - numpy=2.3
   - pip:
+  # For LLM API
+      - openai
   # For Augogen Framework
       - autogen-ext
       - autogen-agentchat
